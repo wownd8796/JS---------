@@ -5,11 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./main.js" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $.ajax({
+        method: "GET",
+        url: "https://dapi.kakao.com/v2/search/web",
+        data: { query: "영화 극한직업" },
+        headers: {
+          Authorization: "KakaoAK 0b60893d091cd8364a61aa1f6d5d17e1",
+        },
+      }).done(function (search) {
+        console.log(search);
+        console.log(search.documents[0].contents);
+      });
+    </script>
+    <script>
+      $("p").append("<strong>" + search.documents[0].title + "</strong>");
+      $("p").append("<strong>" + search.documents[0].contents + "</strong>");
+    </script>
   </head>
   <body>
     <header>
       <div class="logo">가운데 제목</div>
       <div class="nav">왼쪽 메뉴 버튼</div>
     </header>
+    <p></p>
   </body>
 </html>
