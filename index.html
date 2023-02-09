@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./main.css" />
     <link rel="stylesheet" href="./main.js" />
-    <script
+    <!-- <script
       src="https://code.jquery.com/jquery-3.6.3.js"
       integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
       crossorigin="anonymous"
@@ -28,13 +28,15 @@
     <script>
       $("p").append("<strong>" + search.documents[0].title + "</strong>");
       $("p").append("<strong>" + search.documents[0].contents + "</strong>");
-    </script>
+    </script> -->
   </head>
   <body>
-    <header>
-      <div class="logo">가운데 제목</div>
-      <div class="nav">왼쪽 메뉴 버튼</div>
-    </header>
-    <p></p>
+    <div class="mainBox">
+      <h1>나의 최애에 대해 알아보자 😘</h1>
+      <div class="search">
+        <input type="text" />
+        <button class="sBtn">검색</button>
+      </div>
+    </div>
   </body>
 </html>
